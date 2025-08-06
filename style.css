@@ -1,0 +1,83 @@
+/* Basic + font */
+:root{
+    --accent: #007bff;
+    --accent-2: #00d4ff;
+    --bg: #f4f4f8;
+    --card: #ffffff;
+    --text: #222;
+    --muted: #666;
+}
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; padding:0; font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text); scroll-behavior: smooth; }
+
+/* Header layout */
+header {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #fff;
+    padding: 2rem 1rem;
+}
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+.header-left { flex: 0 0 auto; }
+.header-right { flex: 1 1 320px; min-width: 260px; }
+
+/* Profile pic (smaller and with shadow) */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.9);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Title and nav styling */
+.typing-text { margin: 0; font-size: 1.6rem; font-weight:700; line-height:1.1; }
+.subtext { margin: 0.35rem 0 0.9rem; color: rgba(255,255,255,0.95); font-weight:500; }
+
+.top-nav a {
+    display: inline-block;
+    color: rgba(255,255,255,0.95);
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight:500;
+    padding: 0.35rem 0.4rem;
+}
+.top-nav a:hover { text-decoration: underline; }
+
+/* Main content */
+main { max-width: 1100px; margin: 1.25rem auto; padding: 0 1rem; }
+.card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 1.4rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 18px rgba(33,33,33,0.06);
+}
+h2 { color: var(--accent); margin-top:0; }
+
+/* Projects grid */
+.project-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.project { padding: 0.6rem 0; }
+
+/* Footer */
+footer { text-align:center; color:var(--muted); padding: 1rem 0; margin-top: 0.5rem; }
+
+/* Responsive tweaks */
+@media (max-width: 760px) {
+    .header-container { flex-direction: column; text-align:center; padding: 1rem; }
+    .header-right { min-width: auto; }
+    .profile-pic { width: 100px; height: 100px; }
+    .typing-text { font-size:1.25rem; }
+}

@@ -1,16 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const text = "Control Systems • Mechatronics • Vehicle Dynamics";
-    let i = 0;
-    const speed = 80; // typing speed in ms
-    const typingElement = document.getElementById("typing-text");
-
-    function typeWriter() {
-        if (i < text.length) {
-            typingElement.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
+// Simple typing animation for the heading text
+document.addEventListener("DOMContentLoaded", function () {
+  const el = document.querySelector(".typing-text");
+  if (!el) return;
+  const fullText = el.textContent.trim();
+  el.textContent = "";
+  let i = 0;
+  const speed = 60; // ms per character
+  function typeChar() {
+    if (i < fullText.length) {
+      el.textContent += fullText.charAt(i);
+      i++;
+      setTimeout(typeChar, speed);
     }
-    
-    typeWriter();
+  }
+  typeChar();
 });
+
