@@ -8,7 +8,41 @@
     --muted: #666;
 }
 * { box-sizing: border-box; }
-html,body { height:100%; margin:0; padding:0; font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text); scroll-behavior: smooth; }
+
+html,body {
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background:var(--bg);
+    color:var(--text);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Skip link (keyboard accessibility) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    padding: 0.6rem 0.9rem;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    z-index: 9999;
+}
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+}
+
+/* Clear focus styles for keyboard users */
+a:focus,
+a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
 
 /* Header layout */
 header {
@@ -39,7 +73,7 @@ header {
 }
 
 /* Title and nav styling */
-.typing-text { margin: 0; font-size: 1.6rem; font-weight:700; line-height:1.1; }
+.typing-text { margin: 0; font-size: 1.6rem; font-weight:700; line-height:1.2; }
 .subtext { margin: 0.35rem 0 0.9rem; color: rgba(255,255,255,0.95); font-weight:500; }
 
 .top-nav a {
@@ -49,8 +83,17 @@ header {
     margin-right: 1rem;
     font-weight:500;
     padding: 0.35rem 0.4rem;
+    border-radius: 6px;
 }
 .top-nav a:hover { text-decoration: underline; }
+
+/* Improve focus visibility on gradient header */
+.top-nav a:focus,
+.top-nav a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+    text-decoration: underline;
+}
 
 /* Main content */
 main { max-width: 1100px; margin: 1.25rem auto; padding: 0 1rem; }
@@ -63,6 +106,13 @@ main { max-width: 1100px; margin: 1.25rem auto; padding: 0 1rem; }
 }
 h2 { color: var(--accent); margin-top:0; }
 
+/* Links in content: keep discoverable (underline on hover + visible focus) */
+main a {
+    color: var(--accent);
+    text-underline-offset: 2px;
+}
+main a:hover { text-decoration: underline; }
+
 /* Projects grid */
 .project-grid {
     display: grid;
@@ -73,6 +123,12 @@ h2 { color: var(--accent); margin-top:0; }
 
 /* Footer */
 footer { text-align:center; color:var(--muted); padding: 1rem 0; margin-top: 0.5rem; }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html, body { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+}
 
 /* Responsive tweaks */
 @media (max-width: 760px) {
