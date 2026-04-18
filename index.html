@@ -1,75 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Rochak Badyal | Controls & Mechatronics Portfolio</title>
-
-  <meta name="description"
-        content="Rochak Badyal is a graduate student at the University of Minnesota Twin Cities pursuing a Master’s degree in Mechanical Engineering with a focus on control systems and mechatronics. Bachelor’s degree from the National Institute of Technology, Jalandhar.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rochak Badyal | Mechanical Engineer</title>
+    <meta
+        name="description"
+        content="Portfolio of Rochak Badyal, a mechanical engineer focused on control systems, mechatronics, and vehicle dynamics."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <div class="header-container">
-      <div class="header-left">
-        <img src="profile.jpg" alt="Portrait of Rochak Badyal" class="profile-pic">
-      </div>
+    <div class="page-shell">
+        <header class="hero">
+            <nav class="top-nav">
+                <a class="brand" href="#top">Rochak Badyal</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
 
-      <div class="header-right">
-        <h1 class="typing-text">Hi, I'm Rochak Badyal</h1>
-        <p class="subtext">Graduate Student • Control Systems &amp; Mechatronics</p>
+            <div class="hero-grid" id="top">
+                <section class="hero-copy">
+                    <p class="eyebrow">Mechanical Engineer</p>
+                    <h1 class="typing-text">Control Systems, Mechatronics, and Vehicle Dynamics.</h1>
+                    <p class="hero-text">
+                        I build analytical and simulation-driven engineering work around automotive
+                        systems, controls, and dynamic behavior. I am currently pursuing my Master's
+                        in Mechanical Engineering at the University of Minnesota Twin Cities.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">View Projects</a>
+                        <a class="button button-secondary" href="mailto:rochakbadyal@gmail.com">Email Me</a>
+                    </div>
+                </section>
 
-        <nav class="top-nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
+                <aside class="hero-panel">
+                    <img src="profile.jpg" alt="Portrait of Rochak Badyal" class="profile-pic" />
+                    <div class="hero-panel-copy">
+                        <p class="panel-label">Focus Areas</p>
+                        <ul class="focus-list">
+                            <li>Control systems</li>
+                            <li>Mechatronics</li>
+                            <li>Vehicle dynamics</li>
+                            <li>Automotive engineering</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </header>
+
+        <main>
+            <section id="about" class="section section-split">
+                <div>
+                    <p class="section-tag">About</p>
+                    <h2>Engineering work grounded in systems thinking.</h2>
+                </div>
+                <div class="section-copy">
+                    <p>
+                        I bring 4 years of experience in automotive systems and continue to deepen my
+                        work in controls and mechatronics through graduate study. My background
+                        combines academic rigor with applied engineering, from simulation and
+                        parameter studies to dynamic system analysis.
+                    </p>
+                    <p>
+                        I completed my Bachelor's in Mechanical Engineering at NIT Jalandhar, India,
+                        and I am interested in roles and projects where modeling, controls, and
+                        mechanical design intersect.
+                    </p>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-tag">Projects</p>
+                        <h2>Selected work</h2>
+                    </div>
+                    <p class="section-intro">
+                        A few examples of the kind of engineering analysis and optimization work I
+                        enjoy building.
+                    </p>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <p class="project-kicker">Dynamics</p>
+                        <h3>Vehicle Dynamics Analysis</h3>
+                        <p>
+                            MATLAB-based simulation examining how slip angle and slip ratio affect
+                            tire-force generation and overall vehicle response.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-kicker">Optimization</p>
+                        <h3>Ride Comfort Optimization</h3>
+                        <p>
+                            Parametric study focused on selecting spring stiffness values that
+                            improve ride comfort while balancing system constraints.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-kicker">Controls</p>
+                        <h3>Control-Oriented Modeling</h3>
+                        <p>
+                            Engineering coursework and experimentation centered on dynamic-system
+                            behavior, model interpretation, and mechatronics-focused problem solving.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact" class="section contact-strip">
+                <div>
+                    <p class="section-tag">Contact</p>
+                    <h2>Open to engineering conversations and opportunities.</h2>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:rochakbadyal@gmail.com">rochakbadyal@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/rochak-badyal/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/Rochak829" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Rochak Badyal</p>
+        </footer>
     </div>
-  </header>
 
-  <main>
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>
-        I am a graduate student at the University of Minnesota Twin Cities pursuing a Master’s degree in Mechanical Engineering,
-        with a focus on control systems and mechatronics. I completed my bachelor’s degree at the National Institute of Technology,
-        Jalandhar, India.
-      </p>
-    </section>
-
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <article class="project">
-          <h3>Vehicle Dynamics Analysis</h3>
-          <p>MATLAB simulation studying slip angle and slip ratio influence on tire forces.</p>
-        </article>
-
-        <article class="project">
-          <h3>Ride Comfort Optimization</h3>
-          <p>Parametric study to determine optimal spring stiffness for ride comfort.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:rochakbadyal@gmail.com">rochak.badyal@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/rochak-badyal/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rochak-badyal</a></p>
-      <p>GitHub: <a href="https://github.com/Rochak829" target="_blank" rel="noopener noreferrer">github.com/Rochak829</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Rochak Badyal</p>
-  </footer>
-
-  <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
