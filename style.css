@@ -389,3 +389,42 @@
           aspect-ratio: 1 / 1.15;
       }
   }
+
+  /* Adjust text sizes */
+  .hero-copy h1 {
+      font-size: clamp(2rem, 4.5vw, 4.8rem);
+      max-width: 16ch;
+  }
+
+  .hero-text {
+      font-size: clamp(1.25rem, 1.6vw, 1.45rem);
+  }
+
+  .section-copy p,
+  .project-card p,
+  .section-intro,
+  .contact-links a,
+  .focus-list li {
+      font-size: clamp(1.15rem, 1.35vw, 1.3rem);
+  }
+
+  .section h2 {
+      font-size: clamp(2.2rem, 4.2vw, 4.8rem);
+  }
+
+  .project-card h3 {
+      font-size: clamp(1.35rem, 1.7vw, 1.6rem);
+  }
+
+  .eyebrow,
+  .section-tag,
+  .project-kicker,
+  .panel-label {
+      font-size: 0.95rem;
+  }
+  @media (max-width: 680px) {
+      .hero-copy h1 {
+          font-size: clamp(2rem, 10vw, 3.2rem);
+          max-width: none;
+      }
+  }
