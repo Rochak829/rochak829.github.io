@@ -428,3 +428,12 @@
           max-width: none;
       }
   }
+
+  .panel-label {
+      font-size: 1.2rem;
+  }
+
+  .focus-list li {
+      font-size: 1.5rem;
+      line-height: 2;
+  }
