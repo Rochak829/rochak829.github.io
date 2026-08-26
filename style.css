@@ -282,6 +282,12 @@ a {
     font-size: 1.2rem;
 }
 
+.recognition-title {
+    margin: 0 0 12px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.35rem, 1.7vw, 1.6rem);
+}
+
 .project-link {
     margin-top: 14px;
 }
